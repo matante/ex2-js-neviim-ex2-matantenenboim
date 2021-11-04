@@ -4,12 +4,31 @@
 class Todo {
     constructor() {
         this.text = "";
+        this.description = ""
         this.priority = false;
         this.completed = false;
     }
 
-    addText(string) {
-        this.text = string;
+    addText() {
+        let title = document.getElementById("todoTitle");
+        this.text = title.value;
+
+        let description = document.getElementById("todoDescription");
+        this.description = description.value
+
+        let checkbox = document.getElementById("priorityCheckbox");
+        if (checkbox.checked) {
+            this.priority = true;
+        }
+
+        title.value = "";
+        description.value = ""
+        checkbox.checked = false;
+
+    }
+
+    getTask() {
+        return this.text;
     }
 
     setPriority(priority) {
@@ -25,8 +44,31 @@ class Todo {
     }
 
     isCompleted() {
-        return this.completed
+        return this.completed;
     }
 }
+
+const tasks = [];
+
+function addNewTodo() {
+    tasks.push(new Todo());
+    tasks[tasks.length - 1].addText();
+}
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    document.getElementById("addSubmit").addEventListener('click', function () {
+        addNewTodo()
+    });
+    let prioBtn = document.getElementById("priorityBtn");
+    prioBtn.addEventListener('click', function (){
+        //prioBtn.classList.toggle("btn-Success");
+
+    })
+
+
+});
+
 
 console.log("dddddddddddd")
