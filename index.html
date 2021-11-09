@@ -17,35 +17,48 @@
 
     <div class="container mt-2">
         <h3>My TODO List</h3>
-
-        <button type="button" id="priorityBtn" data-bs-toggle="button" class="btn btn-light btn-outline-dark">Show High Priority</button>
-        <button type="button" class="btn btn-light btn-outline-dark">Sort</button>
     </div>
 </div>
+<div class="text-center" id="back"></div>
 
-    <p></p>
+<div class="container" id="highPriorityArea"></div>
 
+
+<div id="belowTitle">
+    <div class="text-center mt-1">
+        <div class="container mt-2">
+
+            <button type="button" id="priorityBtn" data-bs-toggle="button" class="btn btn-light btn-outline-dark">Show
+                High
+                Priority
+            </button>
+            <button type="button" id="sortBtn" class="btn btn-light btn-outline-dark">Sort</button>
+        </div>
+    </div>
+
+
+    <br>
 
     <div class="container">
         Title
         <div class="input-group mt-1 mb-3">
-            <input type="text" id="todoTitle" class="form-control" placeholder="type your title here" aria-label="type your title here"
-                   aria-describedby="basic-addon1">
+            <input type="text" id="todoTitle" class="form-control" placeholder="type your title here"
+                   aria-label="type your title here">
         </div>
     </div>
 
     <div class="container">
         Description
         <div class="input-group mt-1 mb-3">
-            <textarea id="todoDescription" class="form-control" placeholder="type your to-do here" id="floatingTextarea"></textarea>
+            <textarea id="todoDescription" class="form-control" placeholder="type your to-do here"></textarea>
         </div>
     </div>
 
 
     <div class="container mb-3">
         <div class="form-check">
-            <input class="form-check-input" id="priorityCheckbox" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
+            <input class="form-check-input" id="priorityCheckbox" type="checkbox" value="">
+            <label class="form-check-label" for="priorityCheckbox">
                 High Priority
             </label>
         </div>
@@ -55,12 +68,12 @@
     <div class="container">
         <button type="button" id="addSubmit" class="btn btn-light btn-outline-dark">Add</button>
     </div>
+    <br>
 
-    <div class="container" id="todosList">
+    <div class="container" id="inputErrors"></div>
 
-
-    </div>
-
+    <div class="container" id="todosList"></div>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
