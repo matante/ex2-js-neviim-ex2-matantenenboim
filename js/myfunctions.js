@@ -186,6 +186,7 @@ document.addEventListener('DOMContentLoaded', (event) => { // wait for page to l
     };
 
 
+
     // listener for Add btn
     document.getElementById("addSubmit").addEventListener('click', function () {
         if (!isValidInput()) {  // if input is bad, no need to make new task. the function will print the error

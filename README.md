@@ -2,8 +2,8 @@
 # ex2-template
 A started template for JS project
 
-<h1>Your Name(s) Here</h1>
-<p>Email: student@edu.hac.ac.il</p>
+<h1>Matan Tenenboim</h1>
+<p>Email: matante@edu.hac.ac.il</p>
 
 <h1>Execution</h1>
 <p>
